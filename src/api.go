@@ -32,11 +32,11 @@ func getUserByID(c echo.Context) error {
 }
 
 func saveUser(c echo.Context) error {
-	user := User{}
+	user := new(User)
 	if err := c.Bind(user); err != nil {
 		return c.JSON(http.StatusBadRequest, nil)
 	}
-	return c.JSON(http.StatusOK, "post")
+	return c.JSON(http.StatusOK, user)
 }
 
 func main() {
