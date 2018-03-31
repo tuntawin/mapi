@@ -4,7 +4,7 @@ import "net/http"
 import "github.com/labstack/echo"
 import "github.com/labstack/echo/middleware"
 
-//User lkjfhlg
+//User struct
 type User struct {
 	Firstname string `json:"firstname,omitempty"`
 	Lastname  string `json:"lastname,omitempty"`
